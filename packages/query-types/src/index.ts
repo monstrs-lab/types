@@ -28,7 +28,7 @@ export namespace Query {
     OR = 1,
   }
 
-  export interface ID {
+  export interface IDType {
     operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
       exists?: boolean
@@ -37,7 +37,7 @@ export namespace Query {
     }
   }
 
-  export interface DateRange {
+  export interface DateRangeType {
     operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
       from: Date
@@ -45,7 +45,7 @@ export namespace Query {
     }
   }
 
-  export interface Date {
+  export interface DateType {
     operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
       exists?: boolean
