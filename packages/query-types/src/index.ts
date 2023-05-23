@@ -11,7 +11,7 @@ export namespace Query {
 
   export interface Order {
     field: string
-    direction: 0 | 1 | OrderDirection.ASC | OrderDirection.DESC
+    direction: OrderDirection.ASC | OrderDirection.DESC | 0 | 1
   }
 
   export interface SearchField {
@@ -29,18 +29,25 @@ export namespace Query {
   }
 
   export interface ID {
-    operator?: 0 | 1 | Operator.AND | Operator.OR
+    operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
-      eq?: string
-      in?: string[]
+      eq?: string | null
+      in?: Array<string>
     }
   }
 
   export interface DateRange {
-    operator?: 0 | 1 | Operator.AND | Operator.OR
+    operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
       from: Date
       to: Date
+    }
+  }
+
+  export interface Date {
+    operator?: Operator.AND | Operator.OR | 0 | 1
+    conditions?: {
+      eq?: Date | null
     }
   }
 }
