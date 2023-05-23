@@ -31,7 +31,8 @@ export namespace Query {
   export interface ID {
     operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
-      eq?: string | null
+      exists?: boolean
+      eq?: string
       in?: Array<string>
     }
   }
@@ -47,6 +48,7 @@ export namespace Query {
   export interface Date {
     operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
+      exists?: boolean
       eq?: Date | null
     }
   }
