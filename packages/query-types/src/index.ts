@@ -31,25 +31,39 @@ export namespace Query {
   export interface IDType {
     operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
-      exists?: boolean
-      eq?: string
-      in?: Array<string>
+      exists?: {
+        value: boolean
+      }
+      eq?: {
+        value: string
+      }
+      in?: {
+        values: Array<string>
+      }
     }
   }
 
   export interface DateRangeType {
     operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
-      from: Date
-      to: Date
+      from: {
+        value: Date
+      }
+      to: {
+        value: Date
+      }
     }
   }
 
   export interface DateType {
     operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
-      exists?: boolean
-      eq?: Date | null
+      exists?: {
+        value: boolean
+      }
+      eq?: {
+        value: Date
+      }
     }
   }
 }
