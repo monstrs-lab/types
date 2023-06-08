@@ -66,4 +66,19 @@ export namespace Query {
       }
     }
   }
+
+  export interface StringType {
+    operator?: Operator.AND | Operator.OR | 0 | 1
+    conditions?: {
+      eq?: {
+        value: string
+      }
+      in?: {
+        values: Array<string>
+      }
+      contains?: {
+        value: string
+      }
+    }
+  }
 }
