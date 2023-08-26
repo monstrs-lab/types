@@ -870,6 +870,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@monstrs/base-types@workspace:packages/base-types":
+  version: 0.0.0-use.local
+  resolution: "@monstrs/base-types@workspace:packages/base-types"
+  languageName: unknown
+  linkType: soft
+
 "@monstrs/config-eslint@npm:0.3.10":
   version: 0.3.10
   resolution: "@monstrs/config-eslint@npm:0.3.10"
