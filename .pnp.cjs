@@ -14,6 +14,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:."\
     },\
     {\
+      "name": "@monstrs/base-types",\
+      "reference": "workspace:packages/base-types"\
+    },\
+    {\
       "name": "@monstrs/query-types",\
       "reference": "workspace:packages/query-types"\
     }\
@@ -21,6 +25,7 @@ const RAW_RUNTIME_STATE =
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
+    ["@monstrs/base-types", ["workspace:packages/base-types"]],\
     ["@monstrs/query-types", ["workspace:packages/query-types"]],\
     ["types", ["workspace:."]]\
   ],\
@@ -1358,6 +1363,15 @@ const RAW_RUNTIME_STATE =
           ["@jridgewell/sourcemap-codec", "npm:1.4.14"]\
         ],\
         "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@monstrs/base-types", [\
+      ["workspace:packages/base-types", {\
+        "packageLocation": "./packages/base-types/",\
+        "packageDependencies": [\
+          ["@monstrs/base-types", "workspace:packages/base-types"]\
+        ],\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["@monstrs/config-eslint", [\
