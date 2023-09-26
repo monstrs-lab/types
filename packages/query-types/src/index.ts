@@ -46,10 +46,10 @@ export namespace Query {
   export interface DateRangeType {
     operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
-      from: {
+      from?: {
         value: Date
       }
-      to: {
+      to?: {
         value: Date
       }
     }
