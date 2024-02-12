@@ -81,4 +81,16 @@ export namespace Query {
       }
     }
   }
+
+  export interface NumberType {
+    operator?: Operator.AND | Operator.OR | 0 | 1
+    conditions?: {
+      eq?: {
+        value: number
+      }
+      in?: {
+        values: Array<number>
+      }
+    }
+  }
 }
