@@ -93,4 +93,16 @@ export namespace Query {
       }
     }
   }
+
+  export interface BigIntType {
+    operator?: Operator.AND | Operator.OR | 0 | 1
+    conditions?: {
+      eq?: {
+        value: bigint
+      }
+      in?: {
+        values: Array<bigint>
+      }
+    }
+  }
 }
