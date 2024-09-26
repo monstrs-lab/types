@@ -82,6 +82,18 @@ export namespace Query {
     }
   }
 
+  export interface ArrayStringType {
+    operator?: Operator.AND | Operator.OR | 0 | 1
+    conditions?: {
+      eq?: {
+        value: Array<string>
+      }
+      contains?: {
+        value: Array<string>
+      }
+    }
+  }
+
   export interface NumberType {
     operator?: Operator.AND | Operator.OR | 0 | 1
     conditions?: {
