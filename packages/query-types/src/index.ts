@@ -64,6 +64,12 @@ export namespace Query {
       eq?: {
         value: Date
       }
+      lt?: {
+        value: Date
+      }
+      gt?: {
+        value: Date
+      }
     }
   }
 
